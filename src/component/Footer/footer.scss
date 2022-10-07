@@ -1,0 +1,104 @@
+.footer-container {
+  width: 100vw;
+  background-color: black;
+
+  padding: 2rem 2rem;
+}
+.footer {
+  width: 100%;
+  max-width: 110rem;
+  margin: 0 auto;
+  padding: 0 0 4rem 0;
+  display: flex;
+
+  @media screen and (max-width: 62.5em) {
+    display: block;
+    position: relative;
+  }
+
+  &__orange-line {
+    width: 15rem;
+    height: 2px;
+    background-color: var(--color-pry-1);
+    position: absolute;
+  }
+
+  &__text,
+  &__menu {
+    height: 100%;
+    color: white;
+  }
+  &__text {
+    width: 55%;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    font-weight: 200;
+
+    @media screen and (max-width: 62.5em) {
+      width: 100%;
+    }
+
+    & span {
+      font-weight: 600;
+      margin-top: 7rem;
+      display: block;
+    }
+  }
+
+  &__social {
+    width: 50%;
+    align-self: center;
+    display: flex;
+    justify-content: flex-end;
+
+    @media screen and (max-width: 62.5em) {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+    @media screen and (max-width: 35.25em) {
+      position: static;
+      justify-content: center;
+      padding-top: 5rem;
+    }
+
+    & ul {
+      list-style: none;
+      width: 15rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      & li a {
+        cursor: pointer;
+        color: white;
+        font-size: 3rem;
+        transition: all 0.3s;
+        display: block;
+
+        &:hover {
+          color: var(--color-pry-1);
+          transform: scale(0.97);
+        }
+      }
+    }
+  }
+}
+
+.orange-line {
+  width: 100%;
+  max-width: 110rem;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+  top: -2rem;
+  @media screen and (max-width: 35.25em) {
+    justify-content: center;
+  }
+  & > div {
+    width: 10rem;
+    height: 4px;
+    background-color: var(--color-pry-1);
+  }
+}

@@ -1,0 +1,51 @@
+.ui-button {
+  width: 16rem;
+  height: 4.8rem;
+  color: white;
+  background-color: var(--color-pry-1);
+  border: none;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: hsl(22, 66%, 68%);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    &:hover {
+      background-color: var(--color-pry-1);
+    }
+  }
+}
+
+.button-second-style {
+  background-color: var(--color-sec-3);
+
+  &:hover {
+    background-color: var(--color-sec-3);
+  }
+}
+
+.tird-style {
+  background-color: transparent;
+  border: 1px solid var(--color-sec-3);
+  color: var(--color-sec-3);
+
+  &:hover {
+    background-color: var(--color-sec-3);
+    color: white;
+  }
+}
+.width-100 {
+  width: 100%;
+}

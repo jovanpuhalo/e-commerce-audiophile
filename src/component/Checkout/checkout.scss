@@ -1,0 +1,312 @@
+.checkout-container {
+  min-height: 120vh;
+  background-color: var(--color-pry-5);
+  margin-top: -1px; //zbog, radi pomjeranja parenta kada zadam marign chide-u
+  padding-top: 1px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.checkout {
+  max-width: 110rem;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  position: relative;
+  padding: 3rem, 2.5rem;
+  padding-bottom: 5rem;
+
+  @media screen and (max-width: 62.5em) {
+    flex-direction: column;
+  }
+
+  &__form {
+    width: 65%;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 3.5rem;
+
+    @media screen and (max-width: 62.5em) {
+      width: 100%;
+    }
+    &__title {
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    &__sub-title {
+      margin: 3rem 0rem 1.6rem 0rem;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+      color: var(--color-pry-1);
+      padding-top: 4rem;
+    }
+    &__details {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+
+      &__form-control {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        padding-right: 2rem;
+        margin-bottom: 2rem;
+
+        @media screen and (max-width: 35.25em) {
+          width: 100%;
+        }
+
+        & label {
+          padding-bottom: 1.5rem;
+          font-size: 1.3rem;
+          font-weight: 600;
+        }
+        & input {
+          padding: 1.5rem;
+          border-radius: 1rem;
+          border: 1px solid rgba(0, 0, 0, 0.3);
+
+          &:focus-visible,
+          &:active,
+          &:hover {
+            outline: 1px solid var(--color-pry-1);
+          }
+
+          &::placeholder {
+            font-weight: 600;
+          }
+          &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+          }
+        }
+
+        &__label-error {
+          display: flex;
+          justify-content: space-between;
+
+          & p {
+            color: rgb(186, 3, 3);
+            font-size: 1.2rem;
+            font-weight: 600;
+          }
+        }
+      }
+      & .address {
+        width: 100%;
+      }
+    }
+
+    &__payment {
+      display: flex;
+      gap: 2rem;
+      width: 100%;
+      padding-bottom: 3em;
+
+      @media screen and (max-width: 35.25em) {
+        flex-direction: column;
+      }
+
+      &__title {
+        width: 30.5rem;
+        font-size: 1.3rem;
+        font-weight: 600;
+      }
+
+      &__options {
+        width: 30.5rem;
+
+        &__e-money,
+        &__cash {
+          border-radius: 1rem;
+          border: 1px solid rgba(0, 0, 0, 0.3);
+          margin-bottom: 2rem;
+
+          &:hover {
+            outline: 1px solid var(--color-pry-1);
+          }
+
+          & input {
+            display: none;
+          }
+
+          & label {
+            font-size: 1.5rem;
+            font-weight: 600;
+            width: 100%;
+            height: 5.8rem;
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            &::before {
+              content: "";
+              width: 2rem;
+              height: 2rem;
+              border-radius: 50%;
+              border: 2px solid rgba(0, 0, 0, 0.3);
+              margin-right: 1rem;
+              margin-left: 2rem;
+              transition: border 0.4s cubic-bezier(1, -0.03, 1, -0.02);
+            }
+          }
+          & input:checked + label::before {
+            background-image: radial-gradient(var(--color-pry-1), var(--color-pry-1) 35%, transparent 40%);
+            border: 2px solid var(--color-pry-1);
+          }
+        }
+      }
+    }
+  }
+  &__summary {
+    width: 35%;
+    height: fit-content;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 3rem 4rem;
+
+    @media screen and (max-width: 62.5em) {
+      width: 100%;
+    }
+
+    &__title {
+      padding-bottom: 3rem;
+    }
+
+    &__items {
+      height: 27rem;
+      overflow-x: hidden;
+      @media screen and (max-width: 62.5em) {
+        max-height: 28rem;
+        height: fit-content;
+      }
+
+      /* width */
+      &::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: #ffffff;
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 20px;
+      }
+
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: #888;
+
+        border-radius: 20px;
+      }
+
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+
+      &__empty-cart {
+        font-size: 1.5rem;
+        font-weight: 800;
+
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        translate: -50% -50%;
+      }
+    }
+    &__total,
+    &__shipping,
+    &__vat,
+    &__grand-total {
+      width: 100%;
+      height: 4rem;
+      display: flex;
+      justify-content: space-between;
+
+      & > h1 {
+        font-size: 1.3rem;
+        font-weight: 800;
+        color: rgba(0, 0, 0, 0.5);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      & > p {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: rgba(0, 0, 0, 1);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+    }
+    &__total {
+      margin-top: 4rem;
+    }
+
+    &__grand-total {
+      & > p {
+        color: var(--color-pry-1);
+      }
+    }
+  }
+}
+.cash-on-delivery {
+  padding: 4rem 2rem;
+  display: flex;
+  gap: 2rem;
+  display: none;
+
+  @media screen and (max-width: 35.25em) {
+    flex-direction: column;
+    padding: 2rem;
+    align-items: center;
+  }
+
+  & > img {
+    width: 7rem;
+    height: 7rem;
+  }
+  & > div {
+    font-size: 1.5rem;
+    font-weight: 100;
+    letter-spacing: 1px;
+    line-height: 1.5;
+
+    @media screen and (max-width: 35.25em) {
+      text-align: justify;
+    }
+  }
+}
+
+.go-back {
+  margin-top: 15rem;
+  margin-bottom: 3rem;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 110rem;
+
+  @media screen and (max-width: 35.25em) {
+    display: none;
+  }
+}
+.sticky {
+  position: sticky;
+  top: 110px;
+}
+
+.error {
+  & input {
+    outline: 1px solid red;
+
+    &:focus-visible,
+    &:active,
+    &:hover {
+      outline: 1px solid red;
+    }
+  }
+}

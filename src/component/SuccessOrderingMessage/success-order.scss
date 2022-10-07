@@ -1,0 +1,139 @@
+.success-order-container {
+  max-width: 53rem;
+  width: 100%;
+  height: fit-content;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 4rem;
+  background-color: white;
+
+  @media screen and (max-width: 35.25em) {
+    width: 90%;
+    padding: 2rem 3rem;
+  }
+}
+
+.success-order {
+  display: flex;
+  flex-direction: column;
+  &__check {
+    font-size: 8rem;
+    color: var(--color-pry-1);
+
+    @media screen and (max-width: 35.25em) {
+      font-size: 4rem;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+
+    @media screen and (max-width: 35.25em) {
+      font-size: 2.1rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__message {
+    font-size: 1.6rem;
+    color: rgb(0, 0, 0);
+    font-weight: 200;
+    letter-spacing: 1px;
+    margin-bottom: 3rem;
+    @media screen and (max-width: 35.25em) {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__cart {
+    display: flex;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 5rem;
+
+    @media screen and (max-width: 35.25em) {
+      flex-direction: column;
+      margin-bottom: 2rem;
+    }
+
+    &__items {
+      width: 60%;
+      background-color: var(--color-sec-5);
+      padding: 0 2rem;
+
+      display: flex;
+      flex-direction: column;
+
+      @media screen and (max-width: 35.25em) {
+        width: 100%;
+      }
+
+      &__other-items {
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 2rem 0;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.4);
+
+        display: flex;
+        justify-content: center;
+
+        @media screen and (max-width: 35.25em) {
+          padding: 1rem 0;
+        }
+      }
+    }
+
+    &__total {
+      width: 40%;
+      background-color: black;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 4rem;
+
+      @media screen and (max-width: 35.25em) {
+        width: 100%;
+      }
+
+      &__title {
+        color: rgba(255, 255, 255, 0.5);
+        padding: 1rem 0;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        font-weight: 100;
+        letter-spacing: 1px;
+
+        @media screen and (max-width: 35.25em) {
+          padding: 1.5rem 0 1rem 0;
+        }
+      }
+
+      &__amount {
+        padding: 1rem 0;
+        font-size: 2rem;
+        font-weight: 800;
+        letter-spacing: 1px;
+
+        color: white;
+
+        @media screen and (max-width: 35.25em) {
+          font-size: 1.7rem;
+          padding: 1rem 0 1.5rem 0;
+        }
+      }
+    }
+  }
+  & .ui-button {
+    width: 100%;
+  }
+}
+
+.no-borderTop {
+  border-top: none;
+}

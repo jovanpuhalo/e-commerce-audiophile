@@ -1,0 +1,20 @@
+.main-menu__cart {
+  cursor: pointer;
+  position: relative;
+  margin-right: 1rem;
+
+  &__notification {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background-color: var(--color-pry-1);
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

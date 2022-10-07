@@ -1,0 +1,108 @@
+.cart {
+  width: 38rem;
+
+  max-height: 470px;
+  height: fit-content;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 35.25em) {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+
+    &__title {
+      font-size: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+
+      @media screen and (max-width: 35.25em) {
+        font-size: 1.6rem;
+      }
+    }
+    &__remove-all {
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      transition: 0.5s;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--color-pry-1);
+      }
+    }
+  }
+
+  &__items {
+    position: relative;
+    max-height: 26rem;
+    min-height: 10rem;
+    padding-right: 1rem;
+    overflow-x: hidden;
+
+    /* Firefox */
+    /* width */
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: #ffffff;
+      box-shadow: inset 0 0 5px grey;
+      border-radius: 20px;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+
+      border-radius: 20px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    &__empty-cart {
+      font-size: 1.5rem;
+      font-weight: 800;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+    }
+  }
+
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+
+    & > h3 {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 800;
+      color: rgba(0, 0, 0, 0.5);
+    }
+    & > p {
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+  }
+
+  &__checkout {
+    width: 100%;
+    border: 1px solid red;
+  }
+}

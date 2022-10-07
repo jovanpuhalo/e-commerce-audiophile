@@ -1,0 +1,16 @@
+.header-product {
+  max-width: 110rem;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+
+  color: white;
+
+  &__text {
+    padding: 8rem 0;
+    padding-bottom: 5rem;
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 600;
+  }
+}

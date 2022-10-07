@@ -1,0 +1,33 @@
+.top-button {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  background-color: var(--color-pry-1);
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+  transition: all 0.5s;
+
+  &:hover {
+    background-color: hsl(22, 66%, 68%);
+    translate: 0 -0.7rem;
+  }
+
+  &__arrow {
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -30%;
+
+    border-radius: 2px;
+    border: solid rgb(255, 255, 255);
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 3px;
+
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+}

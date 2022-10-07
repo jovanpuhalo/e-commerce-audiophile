@@ -1,0 +1,122 @@
+.container-product-home {
+  padding-bottom: 5rem;
+  overflow: hidden;
+
+  &:first-child {
+    padding-top: 15rem;
+  }
+}
+
+.product-preview-home {
+  max-width: 110rem;
+  margin: 0 auto;
+  height: 57rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+
+  @media screen and (max-width: 62.5em) {
+    flex-direction: column;
+
+    display: block;
+    position: relative;
+    height: 65rem;
+  }
+
+  @media screen and (max-width: 35.25em) {
+    height: 40rem;
+  }
+
+  &__text {
+    width: 50%;
+    height: 100%;
+    padding: 10rem 5rem 0 2rem;
+    color: rgb(255, 255, 255);
+
+    @media screen and (max-width: 62.5em) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+
+      z-index: 100;
+      text-align: center;
+      width: 60%;
+
+      & .ui-button {
+        margin: 0 auto;
+      }
+    }
+
+    @media screen and (max-width: 35.25em) {
+      width: 80%;
+      padding: 0;
+    }
+
+    & h4 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: 1rem;
+      margin-bottom: 2rem;
+      @media screen and (max-width: 35.25em) {
+        font-weight: 200;
+      }
+    }
+
+    & h1 {
+      font-size: 5.6rem;
+      line-height: 1;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      font-weight: 600;
+
+      @media screen and (max-width: 35.25em) {
+        font-size: 3.6rem;
+      }
+    }
+
+    & p {
+      font-size: 1.5rem;
+      font-weight: 100;
+      line-height: 1.5;
+      letter-spacing: 1px;
+      margin-bottom: 3.5rem;
+    }
+    &__price {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      letter-spacing: 1.5px;
+      font-weight: 800;
+      padding-bottom: 2rem;
+    }
+  }
+
+  &__image {
+    width: 50%;
+
+    height: 100%;
+    display: flex;
+
+    @media screen and (max-width: 62.5em) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      width: fit-content;
+    }
+    @media screen and (max-width: 35.25em) {
+      width: 100%;
+      justify-content: center;
+      top: 40%;
+    }
+
+    & img {
+      @media screen and (max-width: 35.25em) {
+        width: 120%;
+        height: 120%;
+      }
+    }
+  }
+}
