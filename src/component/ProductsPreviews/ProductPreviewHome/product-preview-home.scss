@@ -34,6 +34,8 @@
     height: 100%;
     padding: 10rem 5rem 0 2rem;
     color: rgb(255, 255, 255);
+    opacity: 0;
+    animation: showHomeHeader 1.5s ease 0.4s forwards;
 
     @media screen and (max-width: 62.5em) {
       position: absolute;
@@ -98,6 +100,8 @@
 
     height: 100%;
     display: flex;
+    opacity: 0;
+    animation: showHomeHeader 1.5s ease 0.1s forwards;
 
     @media screen and (max-width: 62.5em) {
       position: absolute;
@@ -118,5 +122,14 @@
         height: 120%;
       }
     }
+  }
+}
+
+@keyframes showHomeHeader {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

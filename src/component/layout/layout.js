@@ -5,7 +5,7 @@ import AboutUs from "../AboutUs/AboutUs";
 import Footer from "../Footer/Footer";
 import MainMenu from "../Menues/MainMenu/MainMenu";
 import SecondMenu from "../Menues/SecondMenu/SecondMenu";
-import TopButton from "../UI/TopButton";
+import TopButton from "../UI/TopButton/TopButton";
 
 const Layout = (props) => {
   const location = useLocation();

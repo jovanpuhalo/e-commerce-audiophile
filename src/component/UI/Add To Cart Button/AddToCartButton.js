@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useState } from "react";
-import Button from "../Button";
+import Button from "../Button/Button";
 import "./add-to-cart-button.scss";
 
 const AddToCartButton = ({ addToCartHandler, removeToCartHandler }) => {

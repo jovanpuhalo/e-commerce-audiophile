@@ -23,7 +23,6 @@ const ModalOverlay = (props) => {
 };
 const portalElement = document.getElementById("overlays");
 const Modal = (props) => {
-  console.log("MODAL COMPONENTA");
   return (
     <Fragment>
       {ReactDOM.createPortal(<Backdrop onClose={props.onClose} />, portalElement)}

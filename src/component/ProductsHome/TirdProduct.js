@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router";
 import "./products-home.scss";
 
-import Button from "../UI/Button";
+import Button from "../UI/Button/Button";
 
 const TirdProduct = () => {
   const navigate = useNavigate();

@@ -10,7 +10,7 @@ const items = [
 
 const SecondMenu = (props) => {
   return (
-    <div className="second-menu">
+    <nav className="second-menu">
       {items.map((item, index) => {
         return (
           <MenuItem
@@ -22,7 +22,7 @@ const SecondMenu = (props) => {
           />
         );
       })}
-    </div>
+    </nav>
   );
 };
 

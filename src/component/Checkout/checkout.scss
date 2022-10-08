@@ -175,6 +175,8 @@
 
     &__title {
       padding-bottom: 3rem;
+      font-size: 2rem;
+      font-weight: 800;
     }
 
     &__items {
@@ -228,16 +230,8 @@
       display: flex;
       justify-content: space-between;
 
-      & > h1 {
-        font-size: 1.3rem;
-        font-weight: 800;
-        color: rgba(0, 0, 0, 0.5);
-        letter-spacing: 1px;
-        text-transform: uppercase;
-      }
-
       & > p {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-weight: 800;
         color: rgba(0, 0, 0, 1);
         letter-spacing: 1px;
@@ -283,7 +277,7 @@
   }
 }
 
-.go-back {
+.go-back-checkout {
   margin-top: 15rem;
   margin-bottom: 3rem;
   margin-right: auto;

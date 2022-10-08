@@ -8,7 +8,6 @@ import Modal from "../../UI/Modal/Modal";
 import SecondMenu from "../SecondMenu/SecondMenu";
 
 const MainMenu = (props) => {
-  console.log("MainMenu componentaaaaaa", props);
   const navigate = useNavigate();
   const [showMenu, setShowMenu] = useState(false);
 

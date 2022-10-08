@@ -2,10 +2,8 @@ import { Navigate, Route, Routes } from "react-router";
 import { getProducts } from "./firebase/firebase";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 import { useCallback, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import ScrollToTop from "./component/Helper/ScrollToTop";
 import Layout from "./component/layout/layout";
 import HeadphonesPage from "./Pages/HeadphonesPage";
 import HomePage from "./Pages/HomePage";
@@ -18,7 +16,6 @@ import { cartActions } from "./store/cart-slice";
 import CheckoutPage from "./Pages/CheckoutPage";
 
 function App() {
-  console.log("appppp");
   const dispatch = useDispatch();
   const cartProducts = useSelector((state) => state.cart.cartProducts);
 
@@ -40,7 +37,6 @@ function App() {
   return (
     <Layout>
       <ToastContainer />
-      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/headphones" element={<HeadphonesPage />} />

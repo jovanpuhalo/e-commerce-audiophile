@@ -3,7 +3,7 @@ import { IoIosCheckmarkCircle } from "react-icons/io";
 import { useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/cart-slice";
-import Button from "../UI/Button";
+import Button from "../UI/Button/Button";
 import "./success-order.scss";
 
 const SuccessOrderMsg = (props) => {
@@ -14,8 +14,6 @@ const SuccessOrderMsg = (props) => {
     navigate("/", { replace: true });
     dispatch(cartActions.emptyCart());
   };
-
-  console.log("props.cartItems.length", props.cartItems.length);
 
   return (
     <div className="success-order-container">

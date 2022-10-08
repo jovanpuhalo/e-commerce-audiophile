@@ -18,7 +18,7 @@ const HeaderHome = () => {
     </Container>
   );
 };
-const Container = styled.section`
+const Container = styled.header`
   background-color: black;
   width: 100%;
 `;

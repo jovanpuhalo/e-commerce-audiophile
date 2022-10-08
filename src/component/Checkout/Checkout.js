@@ -6,7 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { schema } from "../Helper/yupValidationSchema";
 import CartItem from "../Cart/CartItem/CartItem";
 import { formatPrice } from "../Helper/HelperFunctions";
-import Button from "../UI/Button";
+import Button from "../UI/Button/Button";
 import "./checkout.scss";
 import Modal from "../UI/Modal/Modal";
 import SuccessOrderMsg from "../SuccessOrderingMessage/SuccessOrderMsg";
@@ -57,15 +57,15 @@ const Checkout = () => {
   );
   return (
     <main className="checkout-container">
-      <div className="go-back" onClick={() => navigate(-1)}>
+      <div className="go-back-checkout" onClick={() => navigate(-1)}>
         Go Back
       </div>
 
       <div className="checkout">
         <form className="checkout__form">
-          <h1 className="checkout__form__title">CHECKOUT</h1>
+          <p className="checkout__form__title">CHECKOUT</p>
 
-          <h4 className="checkout__form__sub-title">BILLING DETAILS</h4>
+          <p className="checkout__form__sub-title">BILLING DETAILS</p>
           <div className="checkout__form__details">
             <div className={`checkout__form__details__form-control ${errors.name?.message && "error"}`}>
               <div className="checkout__form__details__form-control__label-error">
@@ -168,24 +168,24 @@ const Checkout = () => {
         </form>
 
         <div className="checkout__summary sticky">
-          <h1 className="checkout__summary__title">SUMMARY</h1>
+          <p className="checkout__summary__title">SUMMARY</p>
           <div className="checkout__summary__items">
             {cartItems.length ? cartItems : <p className="checkout__summary__items__empty-cart">Your cart is empty!</p>}
           </div>
           <div className="checkout__summary__total">
-            <h1>TOTAL</h1>
+            <p>TOTAL</p>
             <p>{formatPrice(totalPrice)}</p>
           </div>
           <div className="checkout__summary__shipping">
-            <h1>shipping</h1>
+            <p>shipping</p>
             <p>{formatPrice((totalPrice * 0.01).toFixed(0))}</p>
           </div>
           <div className="checkout__summary__vat">
-            <h1>VAT (INCLUDED) </h1>
+            <p>VAT (INCLUDED) </p>
             <p>{formatPrice((totalPrice * 0.001).toFixed(0))}</p>
           </div>
           <div className="checkout__summary__grand-total">
-            <h1>grand total </h1>
+            <p>grand total </p>
             <p>
               {formatPrice(
                 Number((totalPrice * 0.001).toFixed(0)) + Number((totalPrice * 0.01).toFixed(0)) + totalPrice

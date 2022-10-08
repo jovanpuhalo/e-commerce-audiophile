@@ -1,7 +1,5 @@
 .cart {
   width: 38rem;
-
-  max-height: 470px;
   height: fit-content;
   background-color: white;
   border-radius: 1rem;
@@ -103,6 +101,6 @@
 
   &__checkout {
     width: 100%;
-    border: 1px solid red;
+    border: 10px solid red;
   }
 }

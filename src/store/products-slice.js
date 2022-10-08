@@ -5,16 +5,16 @@ const productsSlice = createSlice({
   initialState: {
     allProducts: [],
 
-    homeProduct: {
-      id: "Ym5tscGZmKQc4uveCs1M",
-      name: "XX99 MARK II HEADPHONES",
-      description:
-        "Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.",
-      image: {
-        desktop: "assets/home/headphone-hero-image.png",
-      },
-      slug: "xx99-mark-two-headphones",
-    },
+    // homeProduct: {
+    //   id: "Ym5tscGZmKQc4uveCs1M",
+    //   name: "XX99 MARK II HEADPHONES",
+    //   description:
+    //     "Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.",
+    //   image: {
+    //     desktop: "assets/home/headphone-hero-image.png",
+    //   },
+    //   slug: "xx99-mark-two-headphones",
+    // },
   },
 
   currentProduct: {},

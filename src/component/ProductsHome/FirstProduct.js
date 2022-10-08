@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router";
-import Button from "../UI/Button";
+import Button from "../UI/Button/Button";
 import "./products-home.scss";
 
 const FirstProduct = () => {

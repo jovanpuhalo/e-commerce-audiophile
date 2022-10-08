@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
 import { useSelector } from "react-redux";
 import ProductPreview from "../ProductsPreviews/ProductPreview/ProductPreview";
@@ -8,9 +8,10 @@ import ProductGallery from "./ProductGallery/ProductGallery";
 import MayAlsoLike from "./Also May Like/MayAlsoLike";
 
 const Product = () => {
-  const navigate = useNavigate();
   const productsData = useSelector((state) => state.products.allProducts);
+  const [previousParams, setPreviousParamsId] = useState();
   const params = useParams();
+  const navigate = useNavigate();
 
   let productData = productsData.find((item) => {
     return item.slug === params.id;
@@ -19,6 +20,13 @@ const Product = () => {
   if (!productData) {
     productData = {};
   }
+
+  useEffect(() => {
+    // skrolovanje smoooth samo kada prelazimo sa jednog na drugi product
+    if (previousParams && previousParams !== params.id) window.scrollTo({ top: 0, behavior: "smooth" });
+    if (!previousParams) window.scrollTo({ top: 0 });
+    setPreviousParamsId(params.id);
+  }, [params.id, previousParams]);
 
   const items = productData.includes?.map((item, index) => {
     return (
@@ -31,7 +39,7 @@ const Product = () => {
 
   return (
     <Container>
-      <div className="go-back" onClick={() => navigate(-1)}>
+      <div className="go-back-product" onClick={() => navigate(-1)}>
         Go Back
       </div>
       <ProductPreview productData={productData} />
@@ -52,7 +60,7 @@ const Product = () => {
   );
 };
 
-const Container = styled.div`
+const Container = styled.section`
   max-width: 110rem;
   margin: 0 auto;
 `;

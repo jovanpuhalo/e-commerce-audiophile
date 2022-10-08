@@ -16,7 +16,7 @@ const Products = () => {
     return <ProductPreview key={index} productData={item} imageSide={index % 2 !== 0 && "right"} />;
   });
 
-  return <div className="jovan">{products}</div>;
+  return <section>{products}</section>;
 };
 
 export default Products;

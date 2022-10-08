@@ -6,7 +6,6 @@ import Cart from "../Cart";
 import "./cart-icon.scss";
 
 const CartIcon = () => {
-  console.log("renderujem cart icon");
   const dispatch = useDispatch();
   const cartIsOpen = useSelector((state) => state.cart.cartIsOpen);
   const cartData = useSelector((state) => state.cart.cartProducts);

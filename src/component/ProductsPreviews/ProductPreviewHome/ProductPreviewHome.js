@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Button from "../../UI/Button";
+import Button from "../../UI/Button/Button";
 import { useNavigate, useParams } from "react-router";
 import "./product-preview-home.scss";
 

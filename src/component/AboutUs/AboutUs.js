@@ -3,10 +3,10 @@ import "./about-us.scss";
 
 const AboutUs = () => {
   return (
-    <div className="about">
+    <section className="about">
       <div className="about__text">
         <span>
-          BRINGING YOU THE <span>BEST</span> AUDIO GEAR{" "}
+          BRINGING YOU THE <span>BEST</span> AUDIO GEAR
         </span>
         <br />
         <br />
@@ -16,7 +16,7 @@ const AboutUs = () => {
         make Audiophile the best place to buy your portable audio equipment.
       </div>
       <div className="about__image"></div>
-    </div>
+    </section>
   );
 };
 

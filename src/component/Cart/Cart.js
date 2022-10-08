@@ -4,12 +4,11 @@ import { useNavigate } from "react-router";
 import { cartActions } from "../../store/cart-slice";
 import { formatPrice } from "../Helper/HelperFunctions";
 
-import Button from "../UI/Button";
+import Button from "../UI/Button/Button";
 import "./cart.scss";
 import CartItem from "./CartItem/CartItem";
 
 const Cart = () => {
-  console.log("CART komponenta");
   const cartData = useSelector((state) => state.cart.cartProducts);
   const dispatch = useDispatch();
   const navigate = useNavigate();

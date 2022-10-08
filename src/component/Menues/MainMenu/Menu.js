@@ -16,7 +16,7 @@ const Menu = (props) => {
   };
 
   return (
-    <div className="main-menu__menu">
+    <nav className="main-menu__menu">
       <ul>
         <li>
           <NavLink to={"/"} end style={({ isActive }) => (isActive ? activeStyle : undefined)} onClick={onClickHandler}>
@@ -51,7 +51,7 @@ const Menu = (props) => {
           </NavLink>
         </li>
       </ul>
-    </div>
+    </nav>
   );
 };
 

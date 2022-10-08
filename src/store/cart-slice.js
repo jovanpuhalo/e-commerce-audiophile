@@ -1,13 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
-
-const options = {
-  autoClose: 2000,
-  hideProgressBar: true,
-  closeOnClick: true,
-  bodyClassName: "notification-message",
-  position: toast.POSITION.TOP_LEFT,
-};
+import { options } from "../component/Helper/Toastify/ToastifyOptions";
 
 const cartSlice = createSlice({
   name: "cartSlice",
@@ -20,9 +13,8 @@ const cartSlice = createSlice({
       state.cartIsOpen = action.payload;
     },
 
-    initCart(state, action) {
+    initCart(state) {
       const cart = JSON.parse(localStorage.getItem("cart")) || [];
-      console.log("cart", cart);
       state.cartProducts = [...cart];
     },
     addProductToCart(state, action) {

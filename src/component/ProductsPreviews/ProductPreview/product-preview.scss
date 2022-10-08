@@ -9,7 +9,7 @@
     }
   }
 }
-.go-back {
+.go-back-product {
   width: fit-content;
   margin-top: 17rem;
   transition: 0.55s;
@@ -23,7 +23,7 @@
   }
 
   @media screen and (max-width: 35.25em) {
-    display: none;
+    margin-top: 5rem;
   }
 }
 
