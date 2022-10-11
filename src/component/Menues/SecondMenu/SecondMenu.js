@@ -1,6 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import MenuItem from "./MenuItem";
 import "./second-menu.scss";
+import { useInView } from "react-intersection-observer";
+import { options } from "../../Helper/intersectionOptions";
 
 const items = [
   { url: "/assets/Second menu/headphones.png", name: "headphones", path: "/headphones" },
@@ -9,8 +11,9 @@ const items = [
 ];
 
 const SecondMenu = (props) => {
+  const { ref, inView } = useInView(options);
   return (
-    <nav className="second-menu">
+    <nav className={`second-menu ${inView && "product__show"}`} ref={ref} style={{ ...props.style }}>
       {items.map((item, index) => {
         return (
           <MenuItem
@@ -26,4 +29,4 @@ const SecondMenu = (props) => {
   );
 };
 
-export default SecondMenu;
+export default memo(SecondMenu);

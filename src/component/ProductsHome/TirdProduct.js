@@ -4,13 +4,13 @@ import "./products-home.scss";
 
 import Button from "../UI/Button/Button";
 
-const TirdProduct = () => {
+const TirdProduct = React.forwardRef(({ inVieew }, ref) => {
   const navigate = useNavigate();
   const onClickHendler = () => {
     navigate("/product/yx1-earphones");
   };
   return (
-    <section className="tird-product">
+    <section className={`tird-product  ${inVieew && "product__show"}`} ref={ref}>
       <div className="tird-product__image"></div>
       <div className="tird-product__description">
         <div className="tird-product__description__title">YX1 EARPHONES</div>
@@ -20,6 +20,6 @@ const TirdProduct = () => {
       </div>
     </section>
   );
-};
+});
 
 export default TirdProduct;

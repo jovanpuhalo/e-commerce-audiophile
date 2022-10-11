@@ -39,7 +39,7 @@ const MainMenu = (props) => {
 
       {showMenu && (
         <Modal onClose={onCloseHandler} className="mobile-menu-modal" classContainer="mobile-menu-container">
-          <SecondMenu onCloseMobileMenu={onCloseHandler} />
+          <SecondMenu onCloseMobileMenu={onCloseHandler} style={{ transition: "none" }} />
         </Modal>
       )}
     </div>

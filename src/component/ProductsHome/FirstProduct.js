@@ -3,14 +3,14 @@ import { useNavigate } from "react-router";
 import Button from "../UI/Button/Button";
 import "./products-home.scss";
 
-const FirstProduct = () => {
+const FirstProduct = React.forwardRef(({ inVieew }, ref) => {
   const navigate = useNavigate();
   const onClickHendler = () => {
     navigate("/product/zx9-speaker");
   };
 
   return (
-    <section className="first-product">
+    <section className={`first-product ${inVieew && `product__show`}`} ref={ref}>
       <div className="first-product__image">
         <img src="assets/home/image-speaker-zx9.png" alt="" />
       </div>
@@ -25,6 +25,6 @@ const FirstProduct = () => {
       </div>
     </section>
   );
-};
+});
 
 export default FirstProduct;

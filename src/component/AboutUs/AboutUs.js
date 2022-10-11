@@ -1,9 +1,14 @@
 import React from "react";
 import "./about-us.scss";
 
+import { useInView } from "react-intersection-observer";
+import { options } from "../Helper/intersectionOptions";
+
 const AboutUs = () => {
+  const { ref, inView } = useInView(options);
+
   return (
-    <section className="about">
+    <section className={`about ${inView && "product__show"}`} ref={ref}>
       <div className="about__text">
         <span>
           BRINGING YOU THE <span>BEST</span> AUDIO GEAR

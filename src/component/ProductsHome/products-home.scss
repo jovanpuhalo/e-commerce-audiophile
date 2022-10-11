@@ -9,6 +9,7 @@
   margin-bottom: 4rem;
 
   display: flex;
+  opacity: 0;
 
   @media screen and (max-width: 62.5em) {
     display: block;
@@ -107,6 +108,7 @@
   justify-content: flex-start;
   align-items: center;
   padding-left: 9rem;
+  opacity: 0;
 
   @media screen and (max-width: 62.5em) {
     background-size: cover;
@@ -140,6 +142,7 @@
   gap: 3rem;
 
   margin-bottom: 17rem;
+  opacity: 0;
 
   @media screen and (max-width: 35.25em) {
     flex-direction: column;
@@ -197,4 +200,9 @@
       }
     }
   }
+}
+
+.product__show {
+  opacity: 1;
+  transition: opacity 1s;
 }

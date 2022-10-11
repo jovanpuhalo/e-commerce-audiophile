@@ -6,6 +6,7 @@
   display: flex;
   gap: 3rem;
   padding: 0 2rem;
+  opacity: 0;
 
   @media screen and (max-width: 35.25em) {
     flex-direction: column;

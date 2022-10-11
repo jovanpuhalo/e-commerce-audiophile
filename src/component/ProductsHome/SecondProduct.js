@@ -4,13 +4,13 @@ import { useNavigate } from "react-router";
 import Button from "../UI/Button/Button";
 import "./products-home.scss";
 
-const SecondProduct = () => {
+const SecondProduct = React.forwardRef(({ inVieew }, ref) => {
   const navigate = useNavigate();
   const onClickHendler = () => {
     navigate("/product/zx7-speaker");
   };
   return (
-    <section className="second-product">
+    <section className={`second-product ${inVieew && "product__show"}`} ref={ref}>
       <div className="second-product__description">
         <div className="second-product__description__title">ZX7 SPEAKER</div>
         <Button className={"tird-style"} onClick={onClickHendler}>
@@ -19,6 +19,6 @@ const SecondProduct = () => {
       </div>
     </section>
   );
-};
+});
 
 export default SecondProduct;

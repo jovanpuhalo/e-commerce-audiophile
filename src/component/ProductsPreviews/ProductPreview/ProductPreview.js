@@ -3,6 +3,8 @@ import Button from "../../UI/Button/Button";
 import { useNavigate, useParams } from "react-router";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../../store/cart-slice";
+import { useInView } from "react-intersection-observer";
+import { options } from "../../Helper/intersectionOptions";
 
 import "./product-preview.scss";
 import AddToCartButton from "../../UI/Add To Cart Button/AddToCartButton";
@@ -12,6 +14,8 @@ const ProductPreview = ({ productData, imageSide = "left" }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const params = useParams();
+
+  const { ref, inView } = useInView({ ...options, threshold: 0.2 });
 
   const [loading] = useState(false);
 
@@ -55,7 +59,7 @@ const ProductPreview = ({ productData, imageSide = "left" }) => {
     <div className="container">
       {loading && spinner}
       {!loading && (
-        <div className={productClass}>
+        <div className={`${productClass} ${inView && "product__show"}`} ref={ref}>
           <picture className="product-preview__image ">
             <source srcSet={mobileeSrc} media="(max-width: 564px)" />
             <source srcSet={tabletSrc} media="(max-width: 1000px)" />
