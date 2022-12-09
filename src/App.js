@@ -20,11 +20,12 @@ function App() {
   const cartProducts = useSelector((state) => state.cart.cartProducts);
 
   const fetchData = useCallback(async () => {
-    // const response = await fetch("https://audiophile-api.herokuapp.com/products");
-    // if (response.ok) {
-    //   const data = await response.json();
-    //   dispatch(productsActions.setAllProducts(data));
-    // }
+    //   const response = await fetch("https://audiophile-api.herokuapp.com/products");
+    //   if (response.ok) {
+    //     const data = await response.json();
+    //     dispatch(productsActions.setAllProducts(data));
+    //   }
+
     const res = await getProducts();
     dispatch(productsActions.setAllProducts(res));
   }, [dispatch]);

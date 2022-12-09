@@ -21,6 +21,7 @@ export const getProducts = () => {
       return products;
     })
     .catch((err) => {
+      console.log("errrrrrrrrrrror");
       console.log(err.message);
     });
   return data;
